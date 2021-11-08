@@ -5,14 +5,14 @@ IoTTemperatureRegulatorSystem is a project of a complex system of temperature re
 The temperature control system, due to its degree of dispersion of physical elements in space, is divided into several smaller independent modules performing the set functions:
 
 1. A temperature sensor chip that sends its measurements to the controller:
-⋅⋅⋅a) ESP32.⋅⋅
-⋅⋅⋅b) DS18B20 temperature sensor - digital 1-wire THT.⋅⋅
-⋅⋅⋅c) Communication via MQTT and WiFi.⋅⋅
++ ESP32.
++ DS18B20 temperature sensor - digital 1-wire THT.
++ Communication via MQTT and WiFi.
 2. A hardware actuator circuit in the form of a thermal fan (simulated by an LED) that receives control signals from the controller:
-⋅⋅⋅a) ESP8266.⋅⋅
-⋅⋅⋅b) LED.⋅⋅
-⋅⋅⋅c) 270 Ω resistor.⋅⋅
-⋅⋅⋅d) Communication via MQTT and WiFi.⋅⋅
++ ESP8266.
++ LED.
++ 270 Ω resistor.
++ Communication via MQTT and WiFi.
 3. Mongo Atlas database storing recorded temperature measurements and temperature control settings.
 4. MQTT broker based on mosquitto. The broker is installed on a virtual machine running CentOS on Azure VM and has a static IP address.
 5. A web application to observe the current status of the temperature control system and to edit the preset settings. Developed in React.js technology together with ASP.NET Core Web Api. The application is hosted in Azure App Service.
